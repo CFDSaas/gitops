@@ -8,8 +8,14 @@ controller:
       enabled: true
       additionalLabels:
         release: monitoring
+configs:
+  params:
+    server.insecure: true
 
 server:
+  service:
+    type: NodePort
+    nodePortHttp: 30080
   metrics:
     enabled: true
     serviceMonitor:
@@ -24,3 +30,5 @@ repoServer:
       enabled: true
       additionalLabels:
         release: monitoring
+
+        
