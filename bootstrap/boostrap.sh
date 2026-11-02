@@ -12,3 +12,5 @@ helm upgrade --install argocd argo/argo-cd \
   --version "$ARGOCD_CHART_VERSION" \
   -f "$REPO_ROOT/platform/argocd/values.yaml" \
   --wait
+
+kubectl apply -f "$REPO_ROOT/bootstrap/root-app.yaml"
