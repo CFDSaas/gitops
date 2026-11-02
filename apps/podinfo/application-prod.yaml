@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/CFDSaas/gitops
     targetRevision: main
-    path: apps/podinfo/overlays/dev
+    path: apps/podinfo/overlays/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: podinfo-prod
